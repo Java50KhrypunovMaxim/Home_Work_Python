@@ -1,12 +1,12 @@
-number = int(input("Please enter your number:"))
-n1 = number%10
-number = number//10
-n2 = number%10
-number = number//10
-n3 = number%10
-number = number//10
-n4 = number%10
-number = number//10
+number_of_user = int(input("Please enter your number:"))
+n1 = number_of_user%10
+number_of_user = number_of_user//10
+n2 = number_of_user%10
+number_of_user = number_of_user//10
+n3 = number_of_user%10
+number_of_user = number_of_user//10
+n4 = number_of_user%10
+number_of_user = number_of_user//10
 print(n4)
 print(n3)
 print(n2)
