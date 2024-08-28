@@ -23,10 +23,13 @@ elif user_input in reserved_words:
     flag_for_password = False
     print("Password should not be a reserved Python keyword.")
 
+elif user_input.count("_") > 1:
+    flag_for_password = False
+    print("Password  can contains only one symbol '_'.")
+
 for char in user_input:
     if char in punctuation_list or char == " ":
         flag_for_password = False
         print("Password contains spaces or invalid punctuation.")
         break
-
 print(flag_for_password)
