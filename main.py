@@ -1,1 +1,3 @@
-print("Hello World!")
+a = (1, 2, [3, 6], 4, 5)
+a[2][0] = 0
+print(a)
