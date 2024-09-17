@@ -1,15 +1,14 @@
-def sum_of_digits(number):
-    str_number = str(number)
-    if str_number[0] == '-':
-        str_number = str_number[1:]
-    res = sum(int(digit) for digit in str_number)
-    return res
+def repeat_decorator(repeat_count):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(repeat_count):
+                func(*args, **kwargs)
+        return wrapper
+    return decorator
 
-def find_gcd(a, b):
-    res_array = []
-    for i in range(1,100):
-        if a%i == 0 and b%i == 0:
-            res_array.append(i)
-    return max(res_array)
+@repeat_decorator(3)
+def example_function():
+   print("Hello")
 
-print(find_gcd(15,45))
+
+example_function()
